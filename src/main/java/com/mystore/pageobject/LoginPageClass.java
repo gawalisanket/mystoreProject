@@ -29,6 +29,14 @@ public class LoginPageClass extends BaseClass {
 		return new HomePageClass();
 	}
 	
+	public AddressPageClass loginAccount1() throws InterruptedException
+	{
+		EmailBox.sendKeys(prop.getProperty("username"));
+		PasswordBox.sendKeys(prop.getProperty("password"));
+		signOutBtn.click();
+		Thread.sleep(3000);
+		return new AddressPageClass();
+	}
 	public AccountCreationPage newAccount() {
 		
 		EmailNewCreateAcct.sendKeys(prop.getProperty("username"));
